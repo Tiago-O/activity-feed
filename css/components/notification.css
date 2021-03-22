@@ -1,0 +1,66 @@
+.notifications {
+  /*display: block;*/
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgb(235,235,235);
+}
+
+/*to get rid of border-bottom on the last notification of the feed for instance*/
+.notification:last-child {
+  border-bottom: none;
+}
+
+.notification p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/*-- notification-content --*/
+
+.notification-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.notification-content a {
+  color: #268BD2;
+}
+
+.notification-content a:hover {
+  color: #227FC2;
+}
+
+/*-- notification-actions --*/
+
+.notification-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.notification-actions a {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.notification:hover .notification-actions {
+  opacity: 1;
+}
+
+.notification:hover .notification-actions a {
+  opacity: 1;
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.notification:hover .notification-actions a:hover {
+  opacity: 1;
+  color: #555555;
+}
